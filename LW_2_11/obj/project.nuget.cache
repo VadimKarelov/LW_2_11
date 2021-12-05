@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zqFtpOLg0pEw9uUSlzbSiN8s09fc5zCk2L46U1t5ChFE2Zz6MSPR7i2uixp2PaQBR57QN7HQ5sImdjM3V/ocuA==",
+  "dgSpecHash": "pmh1PNthQnuksgl9PrSVMZlYrz3qE7QcnJxJJC/8/0tujMl2/kQYM8PzappcXIwG3wX7Q95xmjM8G1KZOMM3pA==",
   "success": true,
   "projectFilePath": "D:\\University\\2 year\\OOP\\LW_2_11\\LW_2_11\\LW_2_11.csproj",
   "expectedPackageFiles": [
@@ -17,7 +17,8 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.runtime.extensions\\4.3.0\\system.runtime.extensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
-    "C:\\Users\\Admin\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+    "C:\\Users\\Admin\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.12\\microsoft.netcore.app.host.win-x64.5.0.12.nupkg.sha512"
   ],
   "logs": []
 }
