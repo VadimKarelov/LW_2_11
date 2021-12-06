@@ -11,7 +11,7 @@ namespace LW_2_11_3
     {
         public int NumberOfBooks { get; set; }
 
-        public Library(string name, string locationCity, int numOfBooks) : base(name, locationCity)
+        public Library(string name, string locationCity, int numOfBooks, double avgSalary) : base(name, locationCity, avgSalary)
         {
             NumberOfBooks = numOfBooks;
         }
@@ -30,7 +30,7 @@ namespace LW_2_11_3
 
         public override string ToString()
         {
-            return $"{Name}:{City}:{NumberOfBooks}";
+            return $"{base.ToString()}:{NumberOfBooks}";
         }
 
         public new int CompareTo(object obj)
@@ -38,23 +38,23 @@ namespace LW_2_11_3
             if (obj == null) return 1;
 
             var org = obj as Library;
-            if (org == null || org != null && this == org)
-                return 0;
-            else
-                return this.NumberOfBooks.CompareTo(org.NumberOfBooks);
-        }
+            int res = this.Name.CompareTo(org.Name);
 
-        /*
-        public new int Compare(object x, object y)
-        {
-            if (x == y) return 0;
+            if (res == 0)
+            {
+                res = this.City.CompareTo(org.City);
+            }
+            if (res == 0)
+            {
+                res = this.AverageSalary.CompareTo(org.AverageSalary);
+            }
+            if (res == 0)
+            {
+                res = this.NumberOfBooks.CompareTo(org.NumberOfBooks);
+            }
 
-            if (x is Library o1 && y is Library o2)
-                return o1.CompareTo(o2);
-            else
-                return 0;
+            return res;
         }
-        */
 
         public new object Clone()
         {
@@ -65,7 +65,7 @@ namespace LW_2_11_3
 
         public Organization BaseOrganisation()
         {
-            return new Organization(Name, City);
+            return new Organization(Name, City, AverageSalary);
         }
     }
 }

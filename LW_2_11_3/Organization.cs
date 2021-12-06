@@ -12,10 +12,13 @@ namespace LW_2_11_3
         public string Name { get; set; }
         public string City { get; set; }
 
-        public Organization(string name, string locationCity)
+        public double AverageSalary { get; set; }
+
+        public Organization(string name, string locationCity, double avgSalary)
         {
             Name = name;
             City = locationCity;
+            AverageSalary = avgSalary;
         }
 
         public Organization(ref Random rn)
@@ -24,6 +27,7 @@ namespace LW_2_11_3
             string[] cities = { "Magadan", "Arhangelsk", "Sochi", "Moscow", "Omsk" };
             Name = names[rn.Next(0, names.Length)];
             City = cities[rn.Next(0, cities.Length)];
+            AverageSalary = rn.Next(0, 1000) + rn.NextDouble();
         }
 
         public virtual string Print()
@@ -31,36 +35,34 @@ namespace LW_2_11_3
             string res = "";
             res += "Organisation name: " + Name + "\n";
             res += "Location city: " + City + "\n";
+            res += "Average salary:" + AverageSalary + "\n";
             return res;
         }
 
         public override string ToString()
         {
-            return $"{Name}:{City}";
+            return $"{Name}:{City}:{AverageSalary}";
         }
 
         public int CompareTo(object obj)
         {
             if (obj == null) return 1;
 
-            var org = obj as Organization;
-            if (org != null && this.City == org.City && this.Name == org.Name)
-                return 0;
-            else
-                return this.Name.CompareTo(org.Name);
-        }
+            Organization org = obj as Organization;
 
-        /*
-        public int Compare(object x, object y)
-        {
-            if (x == y) return 0;
+            int res = this.Name.CompareTo(org.Name);
 
-            if (x is Organization o1 && y is Organization o2)
-                return o1.CompareTo(o2);
-            else
-                return 0;
+            if (res == 0)
+            {
+                res = this.City.CompareTo(org.City);
+            }
+            if (res == 0)
+            {
+                res = this.AverageSalary.CompareTo(org.AverageSalary);
+            }
+
+            return res;
         }
-        */
 
         public object Clone()
         {

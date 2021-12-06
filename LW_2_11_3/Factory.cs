@@ -13,7 +13,7 @@ namespace LW_2_11_3
 
         public Organization HeadOrganization { get; set; }
 
-        public Factory(string name, string locationCity, string production) : base(name, locationCity)
+        public Factory(string name, string locationCity, string production, double avgSalary) : base(name, locationCity, avgSalary)
         {
             Production = production;
             HeadOrganization = null;

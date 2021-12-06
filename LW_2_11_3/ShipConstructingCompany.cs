@@ -11,7 +11,7 @@ namespace LW_2_11_3
     {
         public int ShipConstructed { get; set; }
 
-        public ShipConstructingCompany(string name, string locationCity) : base(name, locationCity)
+        public ShipConstructingCompany(string name, string locationCity, double avgSalary) : base(name, locationCity, avgSalary)
         {
             ShipConstructed = 0;
         }

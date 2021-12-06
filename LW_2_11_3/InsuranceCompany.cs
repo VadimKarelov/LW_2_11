@@ -11,7 +11,7 @@ namespace LW_2_11_3
     {
         public int NumberOfClients { get; set; }
 
-        public InsuranceCompany(string name, string locationCity, int numOfClients) : base(name, locationCity)
+        public InsuranceCompany(string name, string locationCity, int numOfClients, double avgSalary) : base(name, locationCity, avgSalary)
         {
             NumberOfClients = numOfClients;
         }

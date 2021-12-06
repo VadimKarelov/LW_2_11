@@ -24,6 +24,7 @@ namespace LW_2_11_3
 
         public TestCollections(int size, ref Random rn)
         {
+            //for (int i = 0; i < size; i++)
             while (this.Length < size)
             {
                 Add(new Library(ref rn));
