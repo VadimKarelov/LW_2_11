@@ -20,7 +20,7 @@ namespace LW_2_11_3
 
         public Organization(ref Random rn)
         {
-            string[] names = { "Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel" };
+            string[] names = { "Alpha", "Bravo", "Charlie", "Delta", "Echo", "Foxtrot", "Golf", "Hotel", "India", "Juliet", "Kilo", "Lima", "Mike" };
             string[] cities = { "Magadan", "Arhangelsk", "Sochi", "Moscow", "Omsk" };
             Name = names[rn.Next(0, names.Length)];
             City = cities[rn.Next(0, cities.Length)];
@@ -32,6 +32,11 @@ namespace LW_2_11_3
             res += "Organisation name: " + Name + "\n";
             res += "Location city: " + City + "\n";
             return res;
+        }
+
+        public override string ToString()
+        {
+            return $"{Name}:{City}";
         }
 
         public int CompareTo(object obj)

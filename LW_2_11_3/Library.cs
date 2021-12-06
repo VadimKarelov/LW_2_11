@@ -28,6 +28,11 @@ namespace LW_2_11_3
             return res;
         }
 
+        public override string ToString()
+        {
+            return $"{Name}:{City}:{NumberOfBooks}";
+        }
+
         public new int CompareTo(object obj)
         {
             if (obj == null) return 1;
