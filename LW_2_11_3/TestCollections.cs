@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LW_2_11_3
 {
-    internal class TestCollections
+    public class TestCollections
     {
         private List<Organization> _collection1 = new();
         private List<string> _collection2 = new();
@@ -43,6 +43,8 @@ namespace LW_2_11_3
             }
         }
 
+
+        /*
         public void Remove(Organization key)
         {
             int ind = _collection1.IndexOf(key);
@@ -55,7 +57,8 @@ namespace LW_2_11_3
                 _collection4.Remove(key.ToString());
             }
         }
-
+         */
+        
         public void Remove(string key)
         {
             int ind = _collection2.IndexOf(key);
@@ -69,7 +72,7 @@ namespace LW_2_11_3
                 _collection3.Remove(org);
                 _collection4.Remove(key.ToString());
             }
-        }
+        }        
 
         public string Print()
         {
@@ -91,6 +94,7 @@ namespace LW_2_11_3
             return _collection2[index];
         }
 
+        /*
         public Library this[Organization key]
         {
             get
@@ -120,19 +124,13 @@ namespace LW_2_11_3
                 }
             }
         }
+        */
 
         public Library this[int index]
         {
             get
             {
-                if (_collection3.ContainsKey(_collection1[index]))
-                {
-                    return _collection3.GetValueOrDefault(_collection1[index]);
-                }
-                else
-                {
-                    return null;
-                }
+                return _collection3.GetValueOrDefault(_collection1[index]);
             }
         }
     }

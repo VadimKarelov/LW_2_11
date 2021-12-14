@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LW_2_11_3
 {
-    class Organization : IComparable, ICloneable, IExecutable
+    public class Organization : IComparable, ICloneable, IExecutable
     {
         public string Name { get; set; }
         public string City { get; set; }
@@ -58,7 +58,7 @@ namespace LW_2_11_3
             }
             if (res == 0)
             {
-                res = this.AverageSalary.CompareTo(org.AverageSalary);
+                //res = this.AverageSalary.CompareTo(org.AverageSalary);
             }
 
             return res;

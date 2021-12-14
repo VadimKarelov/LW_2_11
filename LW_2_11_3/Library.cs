@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LW_2_11_3
 {
-    class Library : Organization, IComparable, ICloneable, IExecutable
+    public class Library : Organization, IComparable, ICloneable, IExecutable
     {
         public int NumberOfBooks { get; set; }
 
@@ -46,7 +46,7 @@ namespace LW_2_11_3
             }
             if (res == 0)
             {
-                res = this.AverageSalary.CompareTo(org.AverageSalary);
+                //res = this.AverageSalary.CompareTo(org.AverageSalary);
             }
             if (res == 0)
             {
