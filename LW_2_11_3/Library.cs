@@ -46,7 +46,7 @@ namespace LW_2_11_3
             }
             if (res == 0)
             {
-                //res = this.AverageSalary.CompareTo(org.AverageSalary);
+                res = this.AverageSalary.CompareTo(org.AverageSalary);
             }
             if (res == 0)
             {

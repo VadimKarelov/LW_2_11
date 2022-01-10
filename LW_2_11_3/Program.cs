@@ -58,13 +58,10 @@ namespace LW_2_11_3
             sw.Stop();
             res += $"Time of search in collection 3 (ticks): {sw.ElapsedTicks}\n";
 
-            Library lib = new("", "", 0, 0);
-            coll.Collection3.TryGetValue(key, out lib);
-
             // collection 4
             sw.Reset();
             sw.Start();
-            coll.Collection4.ContainsValue(lib);
+            coll.Collection4.ContainsKey(key.ToString());
             sw.Stop();
             res += $"Time of search in collection 4 (ticks): {sw.ElapsedTicks}\n";
 
